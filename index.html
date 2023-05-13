@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="pages/index.css">
+  <title>Mesto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="page">
+  <header class="header">
+    <img class="image header__logo" src="images/logo.svg" alt="логотип сайта">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img class="profile__avatar" src="images/profile-avatar.jpg" alt="аватарка профиля"> 
+      <div class="profile__info">
+        <h1 class="profile__title">Жак-Ив Кусто</h1>
+        <button class="button profile__button_size_little"></button>
+        <p class="profile__subtitle">Исследователь океана</p>
+      </div>  
+      <button class="button profile__button_size_big"></button>
+    </section>
+    <section class="elements" aria-label="Карточки мест">
+      <article class="element">
+        <img class="image element__mask-group" src="images/element-karachayevsk.jpg" alt="фотография Шоанинского храма">
+        <div class="element__Item-content">
+          <h2 class="element__title">Карачаевск</h2>
+          <div class="element__favorite-icon"></div>
+        </div>
+      </article>
+      <article class="element">
+        <img class="image element__mask-group" src="images/element-elbrus.jpg" alt="фотография горы Эльбрус">
+        <div class="element__Item-content">
+          <h2 class="element__title">Гора Эльбрус</h2>
+          <div class="element__favorite-icon"></div>
+        </div>
+      </article>
+      <article class="element">
+        <img class="image element__mask-group" src="images/element-dombay.jpg" alt="фотография горнолыжного комплекса Домбай">
+        <div class="element__Item-content">
+          <h2 class="element__title">Домбай</h2>
+          <div class="element__favorite-icon"></div>
+        </div>
+      </article>
+      <article class="element">
+        <img class="image element__mask-group" src="images/element-elbrus.jpg" alt="фотография горы Эльбрус">
+        <div class="element__Item-content">
+          <h2 class="element__title">Гора Эльбрус</h2>
+          <div class="element__favorite-icon"></div>
+        </div>
+      </article>
+      <article class="element">
+        <img class="image element__mask-group" src="images/element-dombay.jpg" alt="фотография горнолыжного комплекса Домбай">
+        <div class="element__Item-content">
+          <h2 class="element__title">Домбай</h2>
+          <div class="element__favorite-icon"></div>
+        </div>
+      </article>
+      <article class="element">
+        <img class="image element__mask-group" src="images/element-karachayevsk.jpg" alt="фотография Шоанинского храма">
+        <div class="element__Item-content">
+          <h2 class="element__title block">Карачаево-Черкесия</h2>
+          <div class="element__favorite-icon"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <dialog class="modal">
+    <div class="modal__window">
+      <h2 class="modal__title">Редактировать профиль</h2>
+      <input class="modal__item modal__item_el_profile-title" type="text" placeholder="Жак-Ив Кусто">
+      <input class="modal__item modal__item_el_profile-subtitle" type="text" placeholder="Исследователь океана">
+      <button class="button modal__button_duty_save">Сохранить</button>
+      <button class="button modal__button_duty_close"></button>
+    </div>
+  </dialog>
+  <footer class="footer">
+    <p class="footer__copyright">&copy;&nbsp;2020&nbsp;Mesto&nbsp;Russia</p>
+  </footer>
+  <script>
+    let openModal = document.querySelector('.profile__button_size_little');
+    let buttonModal = document.querySelector('.modal');
+    let closeModal = document.querySelector('.modal__button_duty_close');
+    openModal.addEventListener('click', function() {
+      buttonModal.showModal()
+    })
+    closeModal.addEventListener('click', function() {
+      buttonModal.close()
+    })
+  </script>
+</body>
+</html>

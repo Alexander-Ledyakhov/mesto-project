@@ -1,0 +1,39 @@
+@import url('../vendor/normalize.css');
+@import url('../fonts/fonts.css');
+
+@import url('../blocks/page/page.css');
+@import url('../blocks/button/button.css');
+@import url('../blocks/block/block.css');
+@import url('../blocks/image/image.css');
+
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/__logo/header__logo.css');
+
+@import url('../blocks/profile/profile.css');
+@import url('../blocks/profile/__avatar/profile__avatar.css');
+@import url('../blocks/profile/__info/profile__info.css');
+@import url('../blocks/profile/__title/profile__title.css');
+@import url('../blocks/profile/__subtitle/profile__subtitle.css');
+@import url('../blocks/profile/__button/_size/profile__button_size_little.css');
+@import url('../blocks/profile/__button/_size/profile__button_size_big.css');
+
+@import url('../blocks/elements/elements.css');
+
+@import url('../blocks/element/element.css');
+@import url('../blocks/element/__mask-group/element__mask-group.css');
+@import url('../blocks/element/__Item-content/element__Item-content.css');
+@import url('../blocks/element/__title/element__title.css');
+@import url('../blocks/element/__favorite-icon/element__favorite-icon.css');
+
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/footer/__copyright/footer__copyright.css');
+
+
+@import url('../blocks/modal/modal.css');
+@import url('../blocks/modal/__window/modal__window.css');
+@import url('../blocks/modal/__title/modal__title.css');
+@import url('../blocks/modal/__item/modal__item.css');
+@import url('../blocks/modal/__item/_el/modal__item_el_profile-subtitle.css');
+@import url('../blocks/modal/__item/_el/modal__item_el_profile-title.css');
+@import url('../blocks/modal/__button/_duty/modal__button_duty_save.css');
+@import url('../blocks/modal/__button/_duty/modal__button_duty_close.css');

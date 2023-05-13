@@ -1,0 +1,21 @@
+.modal__button_duty_close {
+  background-image: url('../../../../images/modal-button-close.svg');
+  background-size: 32px 32px;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .modal__button_duty_close {
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    right: 0px;
+    top: -36px;
+  }
+}

@@ -1,0 +1,25 @@
+.modal__button_duty_save {
+  width: 358px;
+  height: 50px;
+  margin-top: 48px;
+  margin-bottom: 37px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.modal__button_duty_save:hover {
+  opacity: .8;
+}
+
+@media screen and (max-width: 600px) {  
+  .modal__button_duty_save {
+      width: 238px;
+      height: 46px;
+      margin-top: 45px;
+      margin-bottom: 25px;
+      font-size: 14px;
+      line-height: 17px;
+  }
+}

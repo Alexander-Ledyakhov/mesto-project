@@ -1,0 +1,10 @@
+.modal__window {
+  width: 358px;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) { 
+  .modal__window {
+      width: 238px;
+  }
+}
