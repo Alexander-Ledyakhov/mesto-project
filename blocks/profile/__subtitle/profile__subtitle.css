@@ -1,12 +1,11 @@
 .profile__subtitle {
-  display: flex;
   margin: 0px;
+  max-width: 336px;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column: span 2;
 }
 
 @media screen and (max-width: 600px) {
@@ -15,5 +14,6 @@
       text-align: center;
       font-size: 14px;
       line-height: 17px;
+      max-width: 282px;
   }
 }
