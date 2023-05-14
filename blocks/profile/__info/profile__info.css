@@ -1,8 +1,13 @@
 .profile__info {
-  position: relative;
-  width: 336px;
+  max-width: 336px;
   margin: auto;
   margin-left: 30px;
+  display: grid;
+  column-gap: 18px;
+  row-gap: 16px;
+  grid-template-columns: auto 24px;
+  grid-template-rows: 39px 18px;
+  align-items: baseline;
 }
 
 @media screen and (max-width: 600px) {
@@ -10,5 +15,10 @@
       width: 282px;
       margin: auto;
       margin-top: 26px;
+      grid-template-columns: auto 18px;
+      grid-template-rows: 26px 14px;
+      column-gap: 10px;
+      row-gap: 14px;
+      justify-content: center;
   }
 }

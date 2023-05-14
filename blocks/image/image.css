@@ -1,4 +1,4 @@
 .image {
-  object-fit: contain;
+  object-fit: cover;
   object-position: right bottom;
 }

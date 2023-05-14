@@ -1,17 +1,18 @@
 .profile__subtitle {
+  display: flex;
   margin: 0px;
-  margin-top: 7px;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 @media screen and (max-width: 600px) {
   .profile__subtitle {
       margin: auto;
       text-align: center;
-      margin-top: 14px;
       font-size: 14px;
       line-height: 17px;
   }

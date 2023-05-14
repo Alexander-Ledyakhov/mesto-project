@@ -1,13 +1,11 @@
 .profile__button_size_little {
-  position: absolute;
-  top: 15px;
-  right: 0px;
   min-width: 24px;
   min-height: 24px;
   border-radius: 0px;
   background-image: url('../../../../images/profile-button-pen.svg');
   background-size: 10px 10px;
-  border: solid #FFFFFF;
+  margin: auto;
+  margin-bottom: 0px;
 }
 
 @media screen and (max-width: 600px) {
@@ -15,7 +13,6 @@
       min-width: 18px;
       min-height: 18px;
       background-size: 7.5px 7.5px;
-      top: 8px;
-      right: 19px;
+      border: 1px solid #fff; 
   }
 }

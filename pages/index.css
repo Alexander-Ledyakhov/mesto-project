@@ -1,5 +1,5 @@
 @import url('../vendor/normalize.css');
-@import url('../fonts/fonts.css');
+@import url('../vendor/fonts/fonts.css');
 
 @import url('../blocks/page/page.css');
 @import url('../blocks/button/button.css');
@@ -16,24 +16,28 @@
 @import url('../blocks/profile/__subtitle/profile__subtitle.css');
 @import url('../blocks/profile/__button/_size/profile__button_size_little.css');
 @import url('../blocks/profile/__button/_size/profile__button_size_big.css');
+@import url('../blocks/profile/__button/profile__button.css');
 
 @import url('../blocks/elements/elements.css');
 
 @import url('../blocks/element/element.css');
 @import url('../blocks/element/__mask-group/element__mask-group.css');
-@import url('../blocks/element/__Item-content/element__Item-content.css');
+@import url('../blocks/element/__item-content/element__item-content.css');
 @import url('../blocks/element/__title/element__title.css');
 @import url('../blocks/element/__favorite-icon/element__favorite-icon.css');
+@import url('../blocks/element/__favorite-icon/_value/element__favorite-icon_value_active.css');
+@import url('../blocks/element/__favorite-icon/_value/element__favorite-icon_value_disabled.css');
+@import url('../blocks/element/__favorite-icon/_value/element__favorite-icon_value_hover.css');
 
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css');
 
-
-@import url('../blocks/modal/modal.css');
-@import url('../blocks/modal/__window/modal__window.css');
-@import url('../blocks/modal/__title/modal__title.css');
-@import url('../blocks/modal/__item/modal__item.css');
-@import url('../blocks/modal/__item/_el/modal__item_el_profile-subtitle.css');
-@import url('../blocks/modal/__item/_el/modal__item_el_profile-title.css');
-@import url('../blocks/modal/__button/_duty/modal__button_duty_save.css');
-@import url('../blocks/modal/__button/_duty/modal__button_duty_close.css');
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/__container/popup__container.css');
+@import url('../blocks/popup/__form/popup__form.css');
+@import url('../blocks/popup/__title/popup__title.css');
+@import url('../blocks/popup/__item/popup__item.css');
+@import url('../blocks/popup/__item/_el/popup__item_el_profile-title.css');
+@import url('../blocks/popup/__item/_el/popup__item_el_profile-subtitle.css');
+@import url('../blocks/popup/__button/_duty/popup__button_duty_save.css');
+@import url('../blocks/popup/__button/_duty/popup__button_duty_close.css');

@@ -1,9 +1,9 @@
-.modal__item_el_profile-title {
+.popup__item_el_profile-title {
   margin: 54px 0px 0px;
 }
 
 @media screen and (max-width: 600px) {  
-  .modal__item_el_profile-title {
+  .popup__item_el_profile-title {
       margin-top: 75px;
   } 
 }
