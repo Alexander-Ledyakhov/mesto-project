@@ -6,7 +6,9 @@
   box-sizing: border-box;
   overflow: visible;
   position: fixed;
-  display: block;
+  display: grid;
+  grid-template-rows: 23px auto;
+  padding-top: 34px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -15,5 +17,7 @@
 @media screen and (max-width: 600px) {
   .popup__container {
       width: 282px;
+      grid-template-rows: 22px auto;
+      padding-top: 25px;
   }
 }
