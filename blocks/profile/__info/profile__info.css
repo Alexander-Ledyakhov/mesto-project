@@ -13,7 +13,6 @@
 @media screen and (max-width: 600px) {
   .profile__info {
       width: 282px;
-      margin: auto;
       margin-top: 26px;
       grid-template-columns: auto 18px;
       grid-template-rows: 26px 14px;

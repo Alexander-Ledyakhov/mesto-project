@@ -3,4 +3,9 @@
   min-width: 22px;
   min-height: 19px;
   transition: background-image 0.5s ease-in-out;
+  background-image: url('../../../images/favorite-icon-disabled.svg');
 } 
+
+.element__favorite-icon:hover {
+  opacity: .5;
+}

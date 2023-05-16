@@ -6,6 +6,7 @@
   background-size: 10px 10px;
   margin: auto;
   margin-bottom: 0px;
+  border-width: 1px;
 }
 
 @media screen and (max-width: 600px) {
@@ -13,6 +14,5 @@
       min-width: 18px;
       min-height: 18px;
       background-size: 7.5px 7.5px;
-      border: 1px solid #fff; 
   }
 }
