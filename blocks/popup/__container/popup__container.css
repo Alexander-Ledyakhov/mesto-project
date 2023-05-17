@@ -1,0 +1,23 @@
+.popup__container {
+  background: #ffffff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: visible;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 430px;
+  grid-template-rows: 23px auto;
+  padding-top: 34px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px) {
+  .popup__container {
+    grid-template-columns: 282px;
+    grid-template-rows: 22px auto;
+    padding-top: 25px;
+  }
+}
