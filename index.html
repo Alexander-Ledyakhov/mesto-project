@@ -14,70 +14,222 @@
     <section class="profile">
       <img class="image profile__avatar" src="images/profile-avatar.jpg" alt="аватарка профиля"> 
       <div class="profile__info">
-        <h1 class="block profile__title">Жак-Ив Кусто</h1>
+        <h1 class="block profile__name">Жак-Ив Кусто</h1>
         <button class="button profile__button profile__button_size_little" type="button"></button>
-        <p class="block profile__subtitle">Исследователь океана</p>
+        <p class="block profile__job">Исследователь океана</p>
       </div>  
       <button class="button profile__button profile__button_size_big" type="button"></button>
     </section>
-    <section class="elements" aria-label="Карточки мест">
-      <article class="element">
-        <img class="image element__mask-group" src="images/element-karachayevsk.jpg" alt="фотография Шоанинского храма">
-        <div class="element__item-content">
-          <h2 class="element__title block">Карачаевск</h2>
-          <button class="button element__favorite-icon" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="image element__mask-group" src="images/element-elbrus.jpg" alt="фотография горы Эльбрус">
-        <div class="element__item-content">
-          <h2 class="element__title block">Гора Эльбрус</h2>
-          <button class="button element__favorite-icon" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="image element__mask-group" src="images/element-dombay.jpg" alt="фотография горнолыжного комплекса Домбай">
-        <div class="element__item-content">
-          <h2 class="element__title block">Домбай</h2>
-          <button class="button element__favorite-icon" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="image element__mask-group" src="images/element-elbrus.jpg" alt="фотография горы Эльбрус">
-        <div class="element__item-content">
-          <h2 class="element__title block">Гора Эльбрус</h2>
-          <button class="button element__favorite-icon" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="image element__mask-group" src="images/element-dombay.jpg" alt="фотография горнолыжного комплекса Домбай">
-        <div class="element__item-content">
-          <h2 class="element__title block">Домбай</h2>
-          <button class="button element__favorite-icon" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="image element__mask-group" src="images/element-karachayevsk.jpg" alt="фотография Шоанинского храма">
-        <div class="element__item-content">
-          <h2 class="element__title block">Карачаево-Черкесия</h2>
-          <button class="button element__favorite-icon" type="button"></button>
-        </div>
-      </article>
-    </section>
+
+    <section class="elements" aria-label="Карточки мест"></section>
+    
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy;&nbsp;2020&nbsp;Mesto&nbsp;Russia</p>
-  </footer>
-  <div class="popup">
+  </footer> 
+  <div class="popup" id="popup-profile">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__form" name="form-profile">
-        <input class="popup__item popup__item_el_profile-title" type="text" value="Жак-Ив Кусто" name="profile-title">
-        <input class="popup__item popup__item_el_profile-subtitle" type="text" value="Исследователь океана" name="profile-subtitle">
-        <button class="button popup__button popup__button_duty_save" type="submit">Сохранить</button>
+        <input class="popup__item popup__item_el_profile-name" type="text" value="" name="profile-name">
+        <input class="popup__item popup__item_el_profile-job" type="text" value="" name="profile-job">
+        <button class="button popup__button popup__button_duty_save" id="btn-profile-save" type="submit">Сохранить</button>
       </form>
-      <button class="button popup__button popup__button_duty_close" type="button"></button>
+      <button class="button popup__button popup__button_duty_close" id="btn-profile-close" type="button"></button>
     </div>
   </div>
+  <div class="popup" id="popup-content">
+    <div class="popup__container">
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form" name="form-content">
+        <input class="popup__item popup__item_el_content-name" type="text" value="" placeholder="Название" name="content-name">
+        <input class="popup__item popup__item_el_content-link-img" type="text" value="" placeholder="Ссылка на картинку" name="content-link-img">
+        <button class="button popup__button popup__button_duty_save" id="btn-content-save" type="submit">Создать</button>
+      </form>
+      <button class="button popup__button popup__button_duty_close" id="btn-content-close" type="button"></button>
+    </div>
+  </div>
+  <div class="popup image-popup" id="image-popup">
+    <div class="image-popup__content">
+      <img src="" alt="фото карточки" class="image image-popup__image">
+      <button class="button image-popup__btn-close" type="button"></button>
+      <p class="image-popup__name"></p>
+    </div>
+  </div>
+
+
+  <template id="element-template">
+    <article class="element">
+      <img class="image element__mask-group" src="" alt="фотография карточки">
+      <button class="button element__urn-icon" type="button"></button>
+      <div class="element__item-content">
+        <h2 class="element__name block"></h2>
+        <button class="button element__favorite-icon" type="button"></button>
+      </div>
+    </article>
+  </template>
+
+  <script>
+
+    const elements = document.querySelector('.elements');
+
+  
+    //Массив Начало 
+    const initialCards = [
+      {
+        name: 'Архыз',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+      },
+      {
+        name: 'Челябинская область',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+      },
+      {
+        name: 'Иваново',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+      },
+      {
+        name: 'Камчатка',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+      },
+      {
+        name: 'Холмогорский район',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+      },
+      {
+        name: 'Байкал',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+      }
+    ];
+    const elementsList = document.querySelector('.elements');
+    const elementTemplate = document.querySelector('#element-template').content;
+    initialCards.forEach (function (element) {
+      const elementElement = elementTemplate.cloneNode(true);
+      elementElement.querySelector('.element__name').textContent = element.name;
+      elementElement.querySelector('.element__mask-group').src = element.link;
+      elementElement.querySelector('.element__mask-group').alt =  'картинка ' + element.name;
+      elementsList.append(elementElement)
+    })
+
+    //Массив Конец 
+
+
+    //форма изменения профиля. начало
+    const btnOpenEditProfile = document.querySelector('.profile__button_size_little');
+    const nameProfile = document.querySelector('.profile__name');
+    const jobProfile = document.querySelector('.profile__job');
+    const nameInputProfile = document.querySelector('.popup__item_el_profile-name');
+    const jobInputProfile = document.querySelector('.popup__item_el_profile-job');
+    const formEditProfile = document.querySelector('#popup-profile');
+    const btnCloseEditProfile = document.querySelector('#btn-profile-close');
+    function OpenFormProfile() {
+      formEditProfile.classList.add('popup_opened');
+      nameInputProfile.value = nameProfile.textContent;
+      jobInputProfile.value = jobProfile.textContent;
+    }
+    function SubmitFormHandlerProfile(evt) {
+      evt.preventDefault();
+      nameProfile.textContent = nameInputProfile.value;
+      jobProfile.textContent = jobInputProfile.value;
+      formEditProfile.classList.remove('popup_opened');
+    }
+    function CloseFormProfile() {
+      formEditProfile.classList.remove('popup_opened');
+    }
+    btnOpenEditProfile.addEventListener('click', OpenFormProfile);
+    formEditProfile.addEventListener('submit', SubmitFormHandlerProfile);
+    btnCloseEditProfile.addEventListener('click', CloseFormProfile);
+    //форма изменения профиля. Конец
+
+
+    //форма добавления контента (открытие\закрытие без сохранения). Начало
+    const btnOpenContent = document.querySelector('.profile__button_size_big');
+    const formEditContent = document.querySelector('#popup-content');
+    const btnCloseContent = document.querySelector('#btn-content-close');
+    function formOpenContent() {
+      formEditContent.classList.add('popup_opened');
+    }
+    function formCloseContent() {
+      formEditContent.classList.remove('popup_opened');
+    }
+    btnOpenContent.addEventListener('click', formOpenContent);
+    btnCloseContent.addEventListener('click', formCloseContent);
+    //форма добавления контента (открытие\закрытие без сохранения). Конец
+
+
+    //добавление контента. Начало
+    function addElement(nameInputContent, linkImgInputContent) { 
+      const elementElement = elementTemplate.querySelector('.element').cloneNode(true); 
+      elementElement.querySelector('.element__name').textContent = nameInputContent;
+      elementElement.querySelector('.element__mask-group').src = linkImgInputContent;
+      elementElement.querySelector('.element__favorite-icon').addEventListener('click', btnLike);
+      elementElement.querySelector('.element__urn-icon').addEventListener('click', removeContent);
+      elementElement.querySelector('.element__mask-group').alt =  'картинка ' + nameInputContent;
+      elementElement.querySelector('.element__mask-group').addEventListener('click', OpenPopupImaget);
+      elementElement.querySelector('.element__mask-group').addEventListener('click', image);
+      elementElement.querySelector('.element__mask-group').addEventListener('click', textPopupImage);
+      elements.prepend(elementElement)
+      formEditContent.classList.remove('popup_opened');
+    }
+    formEditContent.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+      const nameInputContent = document.querySelector('.popup__item_el_content-name');
+      const linkImgInputContent = document.querySelector('.popup__item_el_content-link-img');
+      addElement(nameInputContent.value, linkImgInputContent.value);
+      nameInputContent.value = '';
+      linkImgInputContent.value = '';
+    });
+    //добавление контента. Конец
+
+
+    //лайк. Начало
+    const likeButtons = document.getElementsByClassName('element__favorite-icon')
+    function btnLike(evt) {
+      evt.target.classList.toggle('element__favorite-icon_active');
+    }
+    for (let i = 0; i < likeButtons.length; i++){
+      likeButtons[i].addEventListener('click', btnLike);
+    }
+    //лайк. Конец
+
+
+    //удаление. Начало
+    const deleteButtons = document.querySelectorAll('.element__urn-icon');
+    function removeContent(evt) {
+      evt.target.closest('.element').remove();
+    }
+    for (let i = 0; i < deleteButtons.length; i++) {
+      deleteButtons[i].addEventListener('click', removeContent);
+    }
+    //удаление. Конец
+
+
+    //Открытие Начало
+    const elementMaskGroup = document.querySelectorAll('.element__mask-group');
+    const popupImageImage = document.querySelector('.image-popup__image');
+    const popupImageName = document.querySelector('.image-popup__name');
+    const popupImage = document.querySelector('.image-popup');
+    const btnClosePopupImage = document.querySelector('.image-popup__btn-close');
+    function OpenPopupImaget() {
+      popupImage.classList.add('popup_opened')
+    }
+    function ClosePopupImage() {
+      popupImage.classList.remove('popup_opened');
+    }
+    function image(evt) {
+      popupImageImage.src = evt.target.src;
+    }
+    function textPopupImage(evt) {
+      popupImageName.textContent = evt.target.parentElement.children[2].children[0].textContent;
+    }
+    btnClosePopupImage.addEventListener('click', ClosePopupImage);
+    for (let i = 0; i < elementMaskGroup.length; i++) {
+      elementMaskGroup[i].addEventListener('click', OpenPopupImaget);
+      elementMaskGroup[i].addEventListener('click', image);
+      elementMaskGroup[i].addEventListener('click', textPopupImage);
+    }
+    //Открытие Конец
+
+  </script>
 </body>
 </html>
