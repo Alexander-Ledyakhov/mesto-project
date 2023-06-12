@@ -1,0 +1,12 @@
+.image-popup__name{
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    left: 0px;
+    bottom: -22px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}

@@ -40,63 +40,7 @@
 @import url('../blocks/popup/__button/_duty/popup__button_duty_close.css');
 @import url('../blocks/popup/_opened/popup_opened.css');
 
-
-
-
-
-
-
-.image-popup {
-    background: rgba(0, 0, 0, .9);
-  }
-
-  .image-popup__content{
-    margin: auto;
-    width: auto;
-    height: auto;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    
-  }
-
-  .image-popup__image {
-    max-height: 75vh;
-    max-width: 75vw;
-    vertical-align: bottom;
-  }
-
-  .image-popup__btn-close {
-    background-image: url('../images/modal-button-close.svg');
-    background-size: 32px 32px;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    right: -40px;
-    top: -40px;
-    border-radius: 0px;
-  }
-
-  .image-popup__name{
-    position: absolute;
-    color: #fff;
-    margin: 0;
-    left: 0px;
-    bottom: -22px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-  }
-
-
-
-
-
-
-
-
-
-
+@import url('../blocks/image-popup/image-popup.css');
+@import url('../blocks/image-popup/__content/image-popup__content.css');
+@import url('../blocks/image-popup/__image/image-popup__image.css');
+@import url('../blocks/image-popup/__name/image-popup__name.css');

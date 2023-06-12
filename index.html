@@ -52,7 +52,7 @@
   <div class="popup image-popup" id="image-popup">
     <div class="image-popup__content">
       <img src="#" alt="фото карточки" class="image image-popup__image">
-      <button class="button image-popup__btn-close" type="button"></button>
+      <button class="button popup__button_duty_close" id="btn-image-popup-close" type="button"></button>
       <p class="image-popup__name"></p>
     </div>
   </div>
@@ -209,7 +209,7 @@
     const popupImageImage = document.querySelector('.image-popup__image');
     const popupImageName = document.querySelector('.image-popup__name');
     const popupImage = document.querySelector('.image-popup');
-    const btnClosePopupImage = document.querySelector('.image-popup__btn-close');
+    const btnClosePopupImage = document.querySelector('#btn-image-popup-close');
     function OpenPopupImaget() {
       popupImage.classList.add('popup_opened')
     }
