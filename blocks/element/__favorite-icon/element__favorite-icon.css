@@ -2,7 +2,7 @@
   background-size: 22px 19px;
   min-width: 22px;
   min-height: 19px;
-  transition: background-image 0.3s ease-in-out;
+  transition: opacity 0.5s, background-image 0.5s linear;
   background-image: url('../../../images/favorite-icon-disabled.svg');
 } 
 
