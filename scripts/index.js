@@ -54,7 +54,7 @@ const initialCards = [
   }
 ];
 //call initial card from the array [initialCards]
-initialCards.reverse().forEach(function(element) {
+initialCards.forEach(function(element) {
     const elementElement = createCard(element.name, element.link)
     elementsList.append(elementElement)
 })
@@ -130,8 +130,7 @@ function createCard(nameInputContent, linkImgInputContent) {
     popupImageImage.alt =  'картинка ' + nameInputContent;
   }
   elementMaskGroup.addEventListener('click', handleImageClick);
-  // add card and location
-  elements.prepend(elementElement)
+  // return card
   return cardElement
 }
 //save new card and close pop-ap [popupEditContent]
@@ -139,7 +138,10 @@ function handleContenFormSubmit(evt) {
   //cancellation of default behavior
   evt.preventDefault();
   //function call [createCard]
-  createCard(nameInputContent.value, linkImgInputContent.value);
+  const cardElement = createCard(nameInputContent.value, linkImgInputContent.value);
+  // location card
+  elements.prepend(cardElement)
+
   evt.target.reset()
   //closing after saving
   closePopup(popupEditContent);
